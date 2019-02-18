@@ -1,0 +1,222 @@
+@import "common";
+
+.jobSearch-page {
+  padding-bottom: 20px;
+  background: #f7f7f7;
+}
+.jobSearch {
+  padding-top: 15px;
+}
+.title-box {
+  @include cen;
+}
+.title-box-text {
+  padding-left: 15px;
+  font-weight: bold;
+}
+.search-title-btn {
+  @include cen-mid;
+  height: 34px;
+  width: 80px;
+  font-size: .2rem;
+  color: white;
+  background: #EB5255;
+}
+.search-title-btn-off {
+  color: black;
+  background: #f7f7f7;
+}
+.search-list-one {
+  padding: 15px 20px;
+  background: white;
+  font-size: .14rem;
+  color: $d-blue
+}
+.search-list-border {
+  border-top: 2px solid #EB5255;
+}
+.search-list-two {
+  @extend .search-list-one
+}
+.search-input {
+  height: 32px;
+  width: 368px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #b4b4b4;
+  color: #555;
+  outline: none;
+  margin-left: 5px;
+}
+@media screen and (max-width: 768px) {
+  .search-input {
+    width: 200px;
+  }
+}
+.search-list-first {
+  position: relative;
+  margin: 15px 0;
+}
+.list-first-title {
+  font-weight: bold;
+}
+.search-list-second {
+  display: inline-block;
+  padding: 3px 13px;
+  margin: 0 5px;
+}
+.search-list-third {
+  display: inline-block;
+  margin: 0 15px 0 70px;
+}
+.list-third-text {
+  display: inline-block;
+  padding: 3px 13px;
+  margin: 0 5px;
+}
+.chooseBtn {
+  color: white;
+  background: #EB5255;
+}
+.search-btn-box {
+  display: flex;
+  justify-content: flex-end;
+}
+.clear-btn {
+  //float: right;
+  padding: 3px 16px;
+  margin: 15px 5px 0 20px;
+  color: $d-blue;
+  background: white;
+  border: none;
+}
+.search-btn {
+  //float: right;
+  padding: 3px 16px;
+  margin: 15px 5px 0 20px;
+  color: white;
+  background: #EB5255;
+  border: none;
+}
+.jobs {
+  margin-top: 20px;
+  background: white;
+}
+.jobs-box {
+  @include cen;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 10px;
+  &:hover {
+    box-shadow: 0 0 7px #E2E2E2;
+  }
+}
+.jobs-detail {
+  width: 50%;
+  padding: 5px 20px;
+  border-right: 1px solid $grey;
+}
+.jobName {
+  @include t-over;
+  font-weight: bold;
+  color: $d-blue;
+}
+.time {
+  @include t-over;
+  margin: 7px 0 10px 10px;
+  font-size: .12rem;
+  color: #999999;
+}
+.salary {
+  @include t-over;
+  margin: 15px 0;
+  font-size: .14rem;
+  font-weight: bold;
+  color: #EB5255;
+}
+.area,.edu,.exp {
+  @include t-over;
+  font-size: .14rem;
+}
+.comp {
+  @include cen-between;
+  width: 50%;
+  padding: 0 20px;
+}
+.comp-text {
+  width: 80%;
+}
+.comp-name {
+  @include t-over;
+  font-size: .14rem;
+  font-weight: bold;
+  color: $d-blue;
+}
+.comp-trades {
+  @include t-over;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.comp-trade {
+  @include t-over;
+  padding: 0 8px;
+  font-size: .14rem;
+  border-right: 1px solid $grey;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    border-right: none;
+  }
+}
+.comp-img {
+  @include cen-mid;
+  width: 112px;
+  height: 112px;
+  border: 1px solid $grey;
+  border-radius: 5px;
+}
+.comp-logo {
+  width: 100px;
+  max-height: 100px;
+}
+//分页插件
+.jobs-page {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+//地区插件
+.areaSelect {
+  display: inline-block;
+  margin-left: 3px;
+  width: 110px;
+}
+.label-text {
+  float: left;
+}
+.value-text {
+  float: left;
+  font-size: 13px
+}
+
+@media only screen and (max-width: 991px) {
+  .jobs-box {
+    @include flex-col;
+    align-items: flex-start;
+  }
+  .jobs-detail {
+    width: 100%;
+    border: none;
+  }
+  .time {
+    display: block;
+    margin: 0;
+  }
+  .comp {
+    @include flex-wrap;
+    width: 100%;
+  }
+}

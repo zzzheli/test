@@ -1,0 +1,310 @@
+@import "common.scss";
+
+.home {
+  margin-top: -6px;
+}
+//首页Banner
+.carousel-content {
+  background: #f7f7f7;
+  .bannerSwiper {
+    .bannerSlide {
+      @include cen-mid;
+      max-height: 25vw;
+      a {
+        max-width: 100%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+//宣传栏
+.feature-content {
+  .feature {
+    background: white;
+    .feature-box {
+      margin: 60px 0;
+      padding: 30px 0;
+      @include cen;
+      @include flex-col;
+      .feature-pic {
+        height: 40px;
+      }
+      .feature-t1 {
+        margin-top: 20px;
+        color: $d-blue;
+        font-weight: bold;
+      }
+      .feature-t2 {
+        margin-top: 5px;
+        color: $s-blue;
+        font-size: 15px;
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      .feature-box {
+        padding: 15px 0;
+        margin: 0;
+      }
+    }
+    .feature-box-b {
+      border-right: 1px solid #E5EAEB;
+    }
+    @media only screen and (max-width: 991px) {
+      .feature-box-b {
+        border-right: none;
+      }
+    }
+    .feature-box2 {
+      margin: 40px 0;
+      padding-left: 100px;
+      @include flex-col;
+      .feature-inform {
+        margin-top: 20px;
+        @include flex-col;
+        .inform-num {
+          color: $red;
+          font-weight: bold;
+        }
+        .inform-text {
+          color: $d-blue;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      .feature-box2 {
+        padding: 0;
+        margin-top: 0;
+        @include cen;
+      }
+    }
+  }
+}
+//最新职位
+.newJob-content {
+  background-color: #f7f7f7;
+  .newJob {
+    padding: 79px 0 37px 0;
+    .newJob-title {
+      @include t-center;
+      .newJob-title-text {
+        font-size: 20px;
+        color: $d-blue;
+        font-weight: bold;
+      }
+      .newJob-border {
+        background: $red;
+        height: 2px;
+        width: 30px;
+        margin: 4px auto;
+      }
+      .newJob-title-en {
+        color: #536a82;
+      }
+    }
+  }
+  .newJob-more {
+    display: block;
+    color: #536a82;
+    text-decoration: none;
+    text-align: right;
+    margin: 0 100px 18px 0;
+    &:hover {
+      color: $d-blue;
+    }
+  }
+  .newJobCarousel {
+    @include cen-mid;
+    padding-bottom: 75px;
+    margin: 0 60px;
+    .newJobSwiper {
+      .newJobSlide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        border: 1px solid #eaeaeb;
+        border-radius: 3px;
+        font-size: .14rem;
+        color: #999999;
+        background-color: white;
+        &:hover {
+          box-shadow:2px 5px 10px #d3d3d3;
+        }
+        .logo-box {
+          width: 100%;
+          .jobCompany-logo {
+            height: 188px;
+            border-bottom:1px solid $grey;
+            @include cen-mid;
+            .jobCompany-logo-pic {
+              max-width: 100%;
+              max-height: 186px;
+            }
+          }
+          .jobText {
+            @include  t-over;
+            display: block;
+            width: 100%;
+            height: 100px;
+            padding: 20px 10px;
+            text-align: center;
+            text-decoration: none;
+            .jobName {
+              font-size: .16rem;
+              font-weight: bold;
+              color: $d-blue;
+            }
+            .jobName-border {
+              background: $red;
+              height: 1px;
+              width: 30px;
+              margin: 4px auto;
+            }
+            .jobCompany {
+              display: block;
+              font-size: .14rem;
+              color: $d-blue;
+              margin: 8px 0;
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-prev {
+      position: relative;
+      left: -15px;
+      padding: 0 15px;
+      height: 38px;
+      outline: none;
+      background: url(../assets/img/left.png) center center;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .swiper-button-next {
+      position: relative;
+      right: -15px;
+      padding: 0 15px;
+      height: 38px;
+      outline: none;
+      background: url(../assets/img/right.png) center center;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @media only screen and (max-width:767px)  {
+      .swiper-button-prev,.swiper-button-next {
+        display: none;
+      }
+    }
+  }
+}
+//服务流程
+.process-content {
+  .process {
+    margin-bottom: 30px;
+    .process-t {
+      @include t-center;
+      margin: 77px 0 5px;
+      .prc-tt {
+        font-size: 20px;
+        color: $d-blue;
+        font-weight: bold;
+      }
+      .prc-b {
+        background: $red;
+        height: 2px;
+        width: 30px;
+        margin: 4px auto;
+      }
+      .prc-tx {
+        color: #536a82;
+      }
+    }
+    .process-box {
+      .prc-box {
+        @include mid;
+        margin-top: 45px;
+        .prc-card {
+          @include t-center;
+          border: 1px solid #E6EBEC;
+          border-radius: 5px;
+          .prc-card-img {
+            display: block;
+            width: 193px;
+            height: 128px;
+          }
+          .prc-card-text {
+            display: inline-block;
+            margin: 15px 0;
+          }
+        }
+        .card-plane {
+          width: 200px;
+          height: 90px;
+          line-height: 176px;
+          text-align: center;
+          border: none;
+          border-bottom: 2px dashed #FFDBDE;
+        }
+      }
+      @media only screen and (max-width: 991px) {
+        .prc-box {
+          @include flex-col;
+          margin-top: 0;
+          .prc-card {
+            border: none;
+            .prc-card-img {
+              width: 320px;
+              height: auto;
+              margin: 0 auto;
+            }
+          }
+          .card-plane {
+            display: none;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width:767px){
+      .process-box {
+        padding: 0;
+      }
+    }
+  }
+}
+//伙伴之言
+.partner-content {
+  background-color: #f7f7f7;
+  .partner {
+    padding: 79px 0 77px 0;
+    .partner-title {
+      @include t-center;
+      .partner-title-text {
+        font-size: 20px;
+        color: $d-blue;
+        font-weight: bold;
+      }
+      .partner-border {
+        background: $red;
+        height: 2px;
+        width: 30px;
+        margin: 4px auto;
+      }
+      .partner-title-en {
+        color: #536a82;
+      }
+    }
+  }
+}
+@media only screen and (max-width:767px) {
+  .content {
+    padding: 0;
+  }
+}

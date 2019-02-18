@@ -1,0 +1,666 @@
+@import "common";
+
+//找职位Banner
+.find-banner {
+  padding-top: 20px;
+  background: #f7f7f7;
+  //职位搜索侧边栏
+  .jobBar {
+    position: relative;
+    height: 460px;
+    background: #f43851;
+    padding: 0;
+    color: white;
+    .jobBar-box {
+      height: 153.5px;
+      padding: 17px 37px 17px 6px;
+      .jobBar-in {
+        @include cen;
+        margin-bottom: 15px;
+        font-size: .18rem;
+        .job-icon {
+          margin: 0 12px;
+        }
+        .right-icon {
+          position: absolute;
+          left: 240px;
+        }
+        @media only screen and (max-width: 1200px) {
+          .right-icon {
+            left: 200px;
+          }
+        }
+      }
+      .jobBar-ul {
+        font-size: .14rem;
+        .jobBar-li {
+          display: inline-block;
+          padding: 6px 12px;
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+      //详细职位
+      .job-list {
+        height: 460px;
+        width: 240%;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding: 20px 100px 50px 0;
+        color: #f43851;
+        .job-list-box {
+          @include cen;
+          li {
+            padding: 0 15px;
+            margin: 5px 0;
+            color: #2b3d51;
+            font-size: .14rem;
+            border-left: $grey solid 1px;
+          }
+          .job-list-title {
+            width: 90px;
+            padding: 0 20px;
+            margin: 5px 0;
+            font-size: .17rem;
+            color: #f43851;
+            border: none;
+            text-align: right;
+          }
+          .pointer:hover {
+            color: #f43851;
+          }
+        }
+      }
+      &:hover {
+        background: white;
+        color: #f43851;
+      }
+      &:hover .job-list {
+        z-index: 100;
+      }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .jobBar {
+      display: none ;
+    }
+  }
+  //职位Banner轮播图
+  .jobBanner {
+    padding: 0;
+    background: #f7f7f7;
+    .companyFind {
+      @include cen;
+      position: absolute;
+      left: 15%;
+      background: white;
+      height: 46px;
+      width: 70%;
+      margin-top: 54px;
+      border-radius: 5px;
+      z-index: 3;
+      .companyName {
+        width: 17%;
+        text-align: center;
+        color: $d-blue;
+      }
+      .typeName {
+        width: 66%;
+        padding: 0 15px;
+        font-size: .14rem;
+        border: none;
+        border-left: 1px solid $grey;
+        outline: none;
+      }
+      .btnFind {
+        height: 46px;
+        width: 17%;
+        font-size: .166rem;
+        color: white;
+        background: #f43851;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+    .companyFind-box {
+      position: absolute;
+      left: 12.5%;
+      background: black;
+      height: 75px;
+      width: 75%;
+      margin-top: 40px;
+      border-radius: 7px;
+      z-index: 2;
+      opacity: 0.4;
+    }
+    @media only screen and (max-width: 767px) {
+      .companyFind {
+        height: 35px;
+        width: 65%;
+        left: 17.5%;
+        .companyName {
+          display: none;
+        }
+        .typeName {
+          width: 75%;
+        }
+        .btnFind {
+          width: 25%;
+          height: 35px;
+          font-size: .14rem;
+          text-align: center;
+        }
+      }
+      .companyFind-box {
+        height: 50px;
+        width: 70%;
+        left: 15%;
+        margin-top: 46px;
+      }
+    }
+    .bannerSwiper {
+      .bannerSlide {
+        @include cen-mid;
+        height: 460px;
+        a {
+          //min-width: 100%;
+          img {
+            height: 460px;
+            width: 100%;
+            //object-fit: contain;
+            //min-width: 100%;
+          }
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      margin-left: 40px;
+      padding: 0 15px;
+      height: 40px;
+      outline: none;
+      background: url(../assets/img/pre-2.png) center center;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .swiper-button-next {
+      margin-right: 40px;
+      padding: 0 15px;
+      height: 40px;
+      outline: none;
+      background: url(../assets/img/next-2.png) center center;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .pagination1 {
+      @include cen-mid;
+      position: absolute;
+      height: 20px;
+      width: 100%;
+      margin-top: -50px;
+    }
+  }
+}
+@media only screen and (max-width:767px) {
+  .find-banner {
+    padding-top: 10px;
+    .jobBanner {
+      .bannerSwiper {
+        .bannerSlide {
+          height: auto;
+          a {
+            img {
+              width: 100vw;
+              height: auto;
+            }
+          }
+        }
+      }
+      .swiper-button-prev {
+        margin-left: 5px;
+      }
+      .swiper-button-next {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+//推荐职位、最新职位
+.jobs {
+  padding-top: 20px;
+  background: #f7f7f7;
+  .container {
+    position: relative;
+  }
+  .job-title {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-size: .14rem;
+    color: $d-blue;
+    .on {
+      font-size: .16rem;
+      font-weight: bold;
+    }
+    .recjob-title {
+      margin-left: 20px;
+    }
+    .newjob-title {
+      margin-left: 5px;
+    }
+    .morejob {
+      float: right;
+      font-size: .15rem;
+      &:hover {
+        color: $d-blue;
+      }
+    }
+  }
+  .joblist {
+    @include flex-wrap;
+    padding: 30px 5px;
+    background: white;
+    .joblist-box {
+      @include cen;
+      width: 270px;
+      height: 130px;
+      margin: 10px 10px;
+      padding: 0 10px;
+      vertical-align: middle;
+      border: 1px solid $grey;
+      border-radius: 5px;
+      background: white;
+      &:hover {
+        box-shadow: 0 0 7px gainsboro;
+      }
+      .joblist-img-box {
+        @include cen-mid;
+        width: 111px;
+        height: 111px;
+        border: 1px solid $grey;
+        .joblist-img {
+          width: 100px;
+          max-height: 100%;
+        }
+      }
+      .joblist-text-box {
+        width: 54%;
+        padding-left: 30px;
+        .joblist-salary {
+          color: #fc2b47;
+        }
+        .joblist-name {
+          @include t-over;
+          margin: 10px 0;
+          font-size: .14rem;
+          color: $d-blue;
+        }
+        .joblist-company {
+          @include t-over;
+          font-size: .14rem;
+          color: $s-blue;
+        }
+      }
+    }
+    @media only screen and (max-width: 1199px){
+      .joblist-box {
+        width: 460px;
+      }
+    }
+    @media only screen and (max-width: 991px){
+      .joblist-box {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+//推荐公司
+.companies {
+  background: #f7f7f7;
+  .company-title {
+    margin-top: 18px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: $d-blue;
+    .recCompany-title {
+      margin-left: 20px;
+      font-size: .16rem;
+      font-weight: bold;
+    }
+    .moreCompany {
+      float: right;
+      font-size: .15rem;
+      &:hover {
+        color: $d-blue;
+      }
+    }
+  }
+  //最新认证公司、普通公司
+  .newRec-common {
+    @include cen;
+    padding: 20px 15px;
+    font-size: .14rem;
+    background: white;
+    //最新认证公司
+    .newRec-company {
+      height: 216px;
+      width: 375px;
+      padding: 100px 30px 12px 12px;
+      color: white;
+      background: url(../assets/img/company-rec.jpg) center center no-repeat;
+      .companyName {
+        display: inline-block;
+        margin: 30px 0 20px 22px;
+        font-size: .16rem;
+        font-weight: bold;
+      }
+      .newRcompany-text {
+        @include cen-between;
+        margin-left: 22px;
+        .companydetail {
+          @include cen;
+          span {
+            margin: 0 5px
+          }
+        }
+      }
+    }
+    //普通公司
+    .common-company-box {
+      @include flex-wrap;
+      width: 890px;
+      padding: 0 0 0 15px;
+      .common-company {
+        @include cen-mid;
+        width: 177px;
+        height: 100px;
+        margin: 8px 9px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        .companyLogo {
+          max-width: 90%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .newRec-common {
+      @include flex-wrap;
+      .newRec-company {
+        width: 100%;
+        background-size: cover;
+        .newRcompany-text {
+          justify-content: left;
+          .companydetail {
+            margin-right: 10px;
+          }
+        }
+      }
+      .common-company-box {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .newRec-common {
+      .newRec-company {
+        .newRcompany-text {
+          .companydetail {
+            margin-right: 0;
+          }
+        }
+      }
+      .common-company-box {
+        .common-company {
+          width: 45%;
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 424px) {
+    .newRec-common {
+      .common-company-box {
+        .common-company {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .newJob-company {
+    padding: 10px 0 45px 0;
+    background: white;
+    .newJob-company-box {
+      position: relative;
+      margin-right: 50px;
+      padding: 15px;
+      border: 1px solid $grey;
+      border-radius: 5px;
+      .newJobCompSwiper {
+        height: 130px;
+        .companySlide {
+          @include cen;
+          .newJobComp-img-box {
+            width: 180px;
+            height: 130px;
+            border: 1px solid $grey;
+            border-radius: 5px;
+          }
+          .com-detail {
+            width: 40%;
+            height: 130px;
+            padding: 20px 30px;
+            border-right: 1px solid $grey;
+            .companyName {
+              @include t-over;
+              font-size: .18rem;
+              font-weight: bold;
+              color: $d-blue;
+            }
+            .companySlogan {
+              @include t-over;
+              margin: 7px 0 10px 0;
+              font-size: .14rem;
+            }
+            .comp-trade-box {
+              @include  t-over;
+              width: 100%;
+              .comp-trade {
+                display: inline-block;
+                padding: 3px 10px;
+                margin-right: 10px;
+                border: 1px solid $grey;
+                border-radius: 2px;
+                font-size: .14rem;
+              }
+            }
+
+          }
+          .comp-job {
+            width: 40%;
+            height: 130px;
+            padding: 20px 15px;
+            .comp-job-title {
+              @include t-over;
+              padding-left: 15px;
+              margin-bottom: 40px;
+              font-size: .18rem;
+              font-weight: bold;
+              color: $d-blue;
+            }
+            .comp-job-text {
+              @include t-over;
+              margin-top: 40px;
+              padding: 0 15px;
+              border-right: 1px solid $grey;
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pagination2 {
+      @include flex-col;
+      position: absolute;
+      top: 20px;
+      right: -30px;
+    }
+    @media only screen and (max-width: 991px) {
+      .newJob-company-box {
+        margin-right: 0;
+        .newJobCompSwiper {
+          .companySlide {
+            .newJobComp-img-box {
+              display: none;
+            }
+            .com-detail {
+              width: 50%;
+            }
+          }
+        }
+        .pagination2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//宣传介绍
+.Introduction {
+  background: #f7f7f7;
+  .Introduction-box {
+    background: white;
+    .content-img {
+      @include cen-end;
+      padding-right: 70px;
+      height: 400px;
+      @include xs-sm {
+        padding: 0;
+        @include cen-cen;
+      }
+    }
+    .content-box {
+      @include cen-start;
+      height: 400px;
+      padding-left: 70px;
+      @include xs {
+        float: none;
+        padding: 0 15px;
+        @include cen-cen;
+      }
+      .content {
+        width: 268px;
+        .ct-strong {
+          display: block;
+          margin-bottom: .18rem;
+          color: #2d3e50;
+          font-size: .24rem;
+        }
+        .ct-first-p {
+          margin-bottom: .1rem;
+          color: #566a81;
+          font-size: .16rem;
+          font-weight: bold;
+        }
+        .ct-finally-p {
+          color: #566a81;
+        }
+      }
+    }
+    @media only screen and (max-width: 991px){
+      .content-img {
+        padding: 0;
+        height: 200px;
+      }
+      .content-box {
+        height: 200px;
+      }
+    }
+  }
+  .row-second {
+    .content-box-second {
+      @include cen-end;
+      height: 400px;
+      padding-right: 70px;
+      @include xs {
+        float: none;
+        padding: 0 15px;
+        @include cen-cen;
+      }
+      .ct-finally-p-a {
+        margin-bottom: 10px;
+        color: #566a81;
+      }
+    }
+    .content-img-second {
+      @include cen-start;
+      padding-left: 70px;
+      height: 400px;
+      @include xs {
+        float: none;
+        padding: 0 15px;
+        @include cen-cen;
+      }
+    }
+    @media only screen and (max-width: 767px){
+      .content-box-second {
+        position: relative;
+        top: 300px;
+        height: 200px;
+      }
+      .content-img-second {
+        position: relative;
+        top: -200px;
+        height: 300px;
+      }
+    }
+  }
+  .findJob-bottom {
+    padding-top: 21px;
+    background: #f7f7f7;
+    .findJob-bottom-box {
+      width: 100%;
+    }
+  }
+}
+
+#page1 /deep/ .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  border:1px solid white;
+  outline: none;
+}
+#page1 /deep/ .swiper-pagination-bullet-active {
+  background: white;
+}
+#page2 /deep/ .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  margin: 8px 0;
+  background: white;
+  border:1px solid #acacac;
+}
+#page2 /deep/ .swiper-pagination-bullet-active {
+  border: none;
+  background: #fc2b47;
+  outline: none;
+}
+
+

@@ -1,0 +1,96 @@
+@import "common.scss";
+
+.about {
+  background: #f5f8f8;
+  padding: 20px 0;
+  .about-sidebar {
+    margin-right: 50px;
+    padding: 70px 0;
+    background: white;
+    text-align: center;
+    .about-bar {
+      @include cen-mid;
+      padding: 9px 0;
+      border-left: 5px solid white;
+        &:hover {
+          color: $red;
+          .about-pic {
+            background: url(../assets/img/iconsprits.png) -10px -10px;
+          }
+          .contact-pic {
+            background: url(../assets/img/iconsprits.png) -10px -50px;
+          }
+        }
+        .about-pic {
+          display: inline-block;
+          height: 17px;
+          width: 18px;
+          margin-right: 5px;
+          background: url(../assets/img/iconsprits.png) -50px -10px;
+        }
+        .contact-pic {
+          display: inline-block;
+          height: 17px;
+          width: 18px;
+          margin-right: 5px;
+          background: url(../assets/img/iconsprits.png) -50px -50px;
+        }
+    }
+    .active {
+      background: #f5f8f8;
+      border-left: 5px solid $red;
+      .about-pic {
+        background: url(../assets/img/iconsprits.png) -10px -10px;
+      }
+      .contact-pic {
+        background: url(../assets/img/iconsprits.png) -10px -50px;
+      }
+      .sideColor {
+        color: $red;
+      }
+    }
+  }
+}
+
+.about-contact {
+  background: white;
+  padding: 80px;
+  @include flex-col;
+}
+.contact-h {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.about-cont-col {
+  font-size: .14rem;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.about-cont-address {
+  @include cen;
+}
+
+.about-article {
+  background: white;
+  padding: 80px;
+  @include flex-col;
+}
+.about-h {
+  border-left: 5px solid $red;
+  margin-bottom: 35px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.about-t1 {
+  font-size: .14rem;
+  margin-bottom: 35px;
+  margin-left: 15px;
+}
+.about-t2 {
+  font-size: .14rem;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+
+

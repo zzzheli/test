@@ -1,0 +1,167 @@
+@import "common";
+
+.content-box {
+  @include cen-end;
+  float: left;
+  height: 400px;
+  padding-right: 70px;
+  @include xs {
+    float: none;
+    padding: 0 15px;
+    @include cen-cen;
+  }
+}
+.content-img {
+  @include align-center;
+  float: right;
+  padding-left: 70px;
+  height: 400px;
+  @include xs {
+    float: none;
+    padding: 0 15px;
+    @include cen-cen;
+  }
+}
+.content {
+  width: 268px;
+}
+.ct-strong {
+  display: block;
+  margin-bottom: .18rem;
+  color: #2d3e50;
+  font-size: .24rem;
+}
+.ct-first-p {
+  margin-bottom: .1rem;
+  color: #566a81;
+  font-size: .16rem;
+  font-weight: bold;
+}
+.ct-finally-p {
+  color: #566a81;
+}
+
+.row-second {
+  background-color: #f6f7f8;
+}
+
+.content-bottom {
+  width: 216px;
+}
+
+.content-img-second {
+  @include cen-end;
+  padding-right: 70px;
+  height: 400px;
+  @include xs {
+    float: none;
+    padding: 0 15px;
+    @include cen-cen;
+  }
+}
+.content-box-second {
+  @include align-center;
+  height: 400px;
+  padding-left: 70px;
+  @include xs {
+    float: none;
+    padding: 0 15px;
+    @include cen-cen;
+  }
+}
+.ct-finally-p-a {
+  margin-bottom: 10px;
+  color: #566a81;
+}
+
+.process {
+  position: relative;
+  padding-bottom: 65px;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+.process-p {
+  text-align: center;
+  margin: .7rem 0 .4rem;
+  font-weight: bold;
+  color: #2f3e4f;
+  font-size: .2rem;
+}
+.text-top,
+.text-middle,
+.text-bottom {
+  position: absolute;
+  max-width: 240px;
+  text-align: left;
+  font-size: .14rem;
+  color: #2f3e4f;
+  @include xs {
+    max-width: 90px;
+  }
+}
+.text-top {
+  left: 50%;
+  top: 25%;
+  transform: translateX(65px);
+  @include xs {
+    top: 20%;
+  }
+}
+.text-middle {
+  top: 58%;
+  right: 50%;
+  transform: translateX(-65px);
+  @include xs {
+    top: 55%;
+  }
+}
+.text-bottom {
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(65px);
+  @include xs {
+    bottom: 1%;
+  }
+}
+.h {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #ef6b5e;
+}
+
+.advantage {
+  padding-bottom: 65px;
+  text-align: center;
+}
+.advantage-p {
+  margin: 20px 0 20px;
+  color: #2f3e4f;
+  font-size: 0.16rem;
+}
+.reserved-box {
+  @include cen-cen;
+  margin-bottom: 40px;
+}
+.reserved {
+  width: 86%;
+  height: 184px;
+  padding: 10px;
+  //background-color: #000;
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.company-btn {
+  width: 183px;
+  height: 55px;
+  font-size: .16rem;
+  outline: none;
+  border: none;
+}

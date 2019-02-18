@@ -1,0 +1,141 @@
+@import "common";
+
+.font-size-12 {
+  font-size: 12px;
+}
+.company-list {
+  background-color: #f6f7f8;
+}
+.company-list-banner {
+  width: 100%;
+}
+.search-company {
+  margin: 20px -15px;
+  padding: 20px 15px;
+  background-color: #fff;
+}
+.search-title {
+    font-size: 14px;
+}
+//地区插件
+.areaSelect {
+  display: inline-block;
+  margin-left: 3px;
+  width: 110px;
+}
+.label-text {
+  float: left;
+}
+.value-text {
+  float: left;
+  font-size: 13px
+}
+
+.choseBoxes {
+  padding: 3px 10px;
+  margin: 2px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+//红色按钮效果
+.redstyle {
+  background-color: #EB5255;
+  color: #fff;
+}
+.redstyle:hover {
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #fc2b47;
+  border-color: #fc2b47;
+}
+.btn-default {
+  margin-right: 15px;
+}
+
+.search-company-list {
+  background-color: #fff;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.search-company-content {
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+.company-box {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.company-card {
+  display: flex;
+  padding: 20px;
+}
+.company-logo {
+  @include cen-cen;
+  width: 115px;
+  height: 115px;
+  border: 1px solid #e8e8e8;
+}
+.company-img {
+
+}
+.company-text {
+  height: 115px;
+  width: 53%;
+  padding: 10px 0 0 15px;
+  overflow: hidden;
+}
+
+.company-name,
+.common-slogan,
+.company-jobs {
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size: 14px;
+}
+.company-name {
+  font-size: .16rem;
+  font-weight: 600;
+  color: #2f3e4f;
+}
+.common-slogan {
+  color: #566a81;
+}
+.company-jobs {
+  color: #566a81;
+}
+
+.company-message {
+  @include cen-around;
+  padding: 10px 0;
+  background-color: #fafafa;
+}
+
+@media screen and (max-width:992px) and (min-width:768px){
+  .company-text {
+    width: 61%;
+  }
+}
+@media screen and (max-width:768px) {
+  .company-text {
+    width: 80%;
+  }
+  .search-company-list {
+    padding: 30px 40px;
+  }
+}
+
+.no-find{
+  height: 495px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

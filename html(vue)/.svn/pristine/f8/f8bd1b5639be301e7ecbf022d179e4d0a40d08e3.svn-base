@@ -1,0 +1,104 @@
+@import "common.scss";
+
+.head {
+  background-color: white;
+  border: none;
+}
+.header-tog {
+  background: $red;
+  z-index: 1000;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: $red;
+}
+.icon-bar {
+  background-color: white;
+}
+.header-ctr {
+  padding: 19.5px 0;
+}
+@media only screen and (max-width:767px){
+  .header-ctr {
+    padding-left: 20px;
+  }
+}
+.h-img {
+  padding-right: 10px;
+  border-right: 1px solid $grey;
+}
+@media only screen and (max-width:991px){
+  .h-img {
+    border: 0;
+  }
+}
+@media only screen and (max-width:767px){
+  .h-img {
+    position: absolute;
+    top: 4px;
+    border: 0;
+  }
+}
+.h-address {
+  padding-left: 8px;
+}
+@media only screen and (max-width:991px){
+  .h-address {
+    display: none;
+  }
+}
+.h-address-text {
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.h-collapse {
+  padding: 0;
+}
+.header-nav {
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .header-nav {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+  }
+}
+.bar-list {
+  margin: 0 25px;
+  &:hover {
+    .bar {
+      .bar-text {
+        color: $red;
+      }
+      .bar-line {
+        width: 100%;
+      }
+    }
+  }
+}
+.bar {
+  padding: 0;
+}
+.bar .bar-text {
+  display: inline-block;
+  margin: 28.5px 0;
+  color: $d-blue;
+}
+.bar .bar-line {
+  width: 0;
+  height: 3px;
+  background: $red;
+  margin: 0 auto;
+  transition: width .2s;
+}
+.router-link-active .bar-text {
+  color: $red;
+  background-color: white;
+}
+.router-link-active .bar-line {
+  width: auto;
+}
+.h-border {
+  height: 6px;
+  background: linear-gradient(#eaeaeb,#f5f8f8);
+}

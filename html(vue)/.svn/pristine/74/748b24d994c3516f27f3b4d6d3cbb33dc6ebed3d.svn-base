@@ -1,0 +1,89 @@
+@import "common";
+
+.noResult {
+  @include cen-mid;
+  height: 493px;
+}
+.text-box {
+  margin-left: 20px;
+}
+.text1 {
+  margin-top: 76px;
+  font-size: .2rem;
+  font-weight: bold;
+  color: $d-blue;
+}
+.text2 {
+  font-size: .17rem;
+  color: #536a82;
+}
+
+.search-company-content {
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+.company-box {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.company-card {
+  display: flex;
+  padding: 20px;
+}
+.company-logo {
+  @include cen-cen;
+  width: 115px;
+  height: 115px;
+  border: 1px solid #e8e8e8;
+}
+
+.company-text {
+  height: 115px;
+  width: 53%;
+  padding: 10px 0 0 15px;
+  overflow: hidden;
+}
+
+@media screen and (max-width:992px) and (min-width:768px){
+  .company-text {
+    width: 61%;
+  }
+}
+@media screen and (max-width:768px) {
+  .company-text {
+    width: 80%;
+  }
+  .search-company-list {
+    padding: 30px 40px;
+  }
+}
+
+.company-name,
+.common-slogan,
+.company-jobs {
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+.common-slogan {
+  font-size: .14rem;
+}
+.company-name {
+  font-size: .16rem;
+  color: #fc2b47;
+}
+.company-jobs {
+  font-size: .14rem;
+  color: #566a81;
+}
+.company-message {
+  @include cen-around;
+  font-size: .14rem;
+  padding: 10px 0;
+  background-color: #fafafa;
+}

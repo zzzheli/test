@@ -1,0 +1,67 @@
+@import "common.scss";
+
+//伙伴之言轮播图
+.carousel {
+  @include cen-mid;
+  padding-bottom: 75px;
+  margin: 0 60px;
+  .swiper {
+    .swiper-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 380px;
+      padding: 30px 20px;
+      margin-bottom: 10px;
+      border: 1px solid #eaeaeb;
+      border-radius: 3px;
+      font-size: .14rem;
+      color: #999999;
+      background-color: white;
+      &:hover {
+        box-shadow:2px 5px 10px #d3d3d3;
+      }
+      img {
+        border-radius: 50%;
+        border: 1px solid $grey;
+      }
+      .swiper-title {
+        font-size: .16rem;
+        font-weight: bold;
+        color: $d-blue;
+        margin: 20px 0 10px;
+      }
+    }
+  }
+  .swiper-button-prev {
+    position: relative;
+    left: -15px;
+    padding: 0 15px;
+    height: 38px;
+    outline: none;
+    background: url(../assets/img/left.png) center center;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .swiper-button-next {
+    position: relative;
+    right: -15px;
+    padding: 0 15px;
+    height: 38px;
+    outline: none;
+    background: url(../assets/img/right.png) center center;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  @media only screen and (max-width:767px)  {
+    .swiper-button-prev,.swiper-button-next {
+      display: none;
+    }
+  }
+}
+
+

@@ -1,0 +1,12 @@
+@import "common.scss";
+
+html {
+  font-size: 625% !important;
+}
+
+body {
+  font-size: .16rem !important;
+  font-family: "Microsoft YaHei",sans-serif !important;
+  background: white;
+  color: $d-blue;
+}

@@ -1,0 +1,78 @@
+@import "common.scss";
+
+.foot {
+  margin-top: 20px;
+  padding: 25px 0;
+  color: #b0b0b0;
+  background: white;
+}
+.about {
+  @include flex-col;
+}
+.aboutus {
+  display: block;
+  width: 80px;
+  &:hover {
+    color: $red;
+  }
+}
+.about-text {
+  margin-top: 20px;
+  font-size: .14rem;
+}
+@media only screen and (max-width: 991px) {
+  .contact {
+    margin-top: 10px;
+  }
+}
+.contactus {
+  display: block;
+  width: 80px;
+  &:hover {
+    color: $red;
+  }
+}
+.phone {
+  margin-top: 20px;
+}
+.email,.address {
+  margin-top: 10px;
+}
+.address {
+  margin-top: 10px;
+  @include cen;
+}
+.contact-text {
+  margin: 0 ;
+  font-size: .14rem;
+}
+
+.qr-code {
+  margin-top:20px;
+}
+.code-pic {
+  margin: 0 auto;
+  display: block;
+}
+@media only screen and (max-width: 991px) {
+  .code-pic {
+    margin: unset;
+  }
+}
+.wechat {
+  @include t-center;
+  display: block;
+  font-size: .14rem;
+}
+@media only screen and (max-width: 991px) {
+  .wechat {
+    text-align: unset;
+  }
+}
+.cpr {
+  color: #959a99;
+  background: #36495a;
+  font-size: .12rem;
+  @include t-center;
+  line-height: 28px;
+}

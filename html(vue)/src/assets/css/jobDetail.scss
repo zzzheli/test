@@ -1,0 +1,242 @@
+@import "common";
+
+// 职位详情
+.jobDetail {
+  padding: 20px 0;
+  background: #f7f7f7;
+  color: #536a82
+}
+.jobDetail-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px 30px 20px;
+  background: white;
+}
+//左栏
+.jobShareDetail {
+  width: 70%;
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+//职位信息
+.jobDetail-job {
+  border-right: 1px solid $grey;
+  @media only screen and (max-width: 991px) {
+    border: none;
+  }
+}
+.jobDetail-jobIdc {
+  margin-right: 50px;
+  border-bottom: 1px solid $grey;
+  @media only screen and (max-width: 991px) {
+    margin-right: 0;
+  }
+}
+.jobName {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: $d-blue;
+}
+.jobCompany {
+  margin-bottom: 16px;
+  font-size: .14rem;
+}
+.job-text {
+  @include cen;
+  font-size: .14rem;
+}
+.jobSalary {
+  margin-right: 10px;
+  font-size: .14rem;
+  font-weight: bold;
+  color: #fc2b47;
+}
+.job-inf {
+  @include cen;
+  margin-right: 10px;
+}
+.job-inf2 {
+  margin: 0;
+}
+.job-inf-icon {
+  margin-right: 3px;
+}
+.job-time {
+  @include cen;
+  margin: 5px 0 20px 0;
+  font-size: .12rem;
+}
+.updateAt {
+  margin-left: 5px;
+}
+.jobDetail-jobdtl {
+  margin: 25px 50px 20px 0;
+  border-bottom: 1px solid $grey;
+  font-size: .14rem;
+  @media only screen and (max-width: 991px) {
+    margin-right: 0;
+  }
+}
+.jobDetail-title {
+  padding-left: 10px;
+  font-weight: bold;
+  color: $d-blue;
+  border-left: 5px solid #fc2b47;
+  font-size: .16rem;
+}
+.job-title {
+  margin: 10px 0;
+}
+.job-text2 {
+  margin-bottom: 28px;
+}
+//分享、我感兴趣
+.share-int {
+  @include cen-between;
+  margin-right: 50px;
+}
+.share-box {
+  @include cen;
+}
+.share-text {
+  margin: 0 20px 0 5px;
+}
+.share-wx,.share-qq,.share-wb {
+  margin-right: 10px;
+}
+.wxModal {
+  top: 50%;
+  font-size: .12rem;
+}
+.wxModal-content {
+  width: 280px;
+  padding: 0 10px;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  box-shadow: none;
+}
+.wxModal-header {
+  text-align: center;
+  color: #333333;
+  border-bottom: 1px solid $grey;
+}
+.wxclose {
+  outline: none;
+}
+.wxModal-title {
+  font-size: .12rem;
+}
+.btn-int {
+  height: 40px;
+  width: 18%;
+  min-width: 90px;
+  background: #fc2b47;
+  color: white;
+  outline: none;
+}
+.btn-int:hover {
+  color: white;
+}
+.btn-int:focus {
+  color: white;
+}
+.intModal-dialog {
+  max-width: 500px;
+}
+.intModal-header {
+  background: #fc2b47;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+.intModal-close,.intModal-title {
+  opacity: 1;
+  color: white;
+  outline: none;
+}
+.intModal-body {
+  padding: 25px 70px;
+  @media only screen and (max-width: 767px) {
+    padding:20px;
+  }
+}
+.intModal-idc {
+  color: #333333;
+  margin-bottom: 10px;
+}
+.intModal-text1 {
+  font-size: .14rem;
+  color: #666666;
+  margin-bottom: 10px;
+}
+.intModal-text2 {
+  font-size: .14rem;
+  color: #666666;
+}
+.intModal-email {
+  margin: 20px 0 10px 0;
+  color: #333333;
+  font-size: .14rem;
+}
+//公司信息
+.jobDetail-company {
+  @include cen;
+  @include flex-col;
+  width: 30%;
+  padding-left: 55px;
+  font-size: .14rem;
+  @media only screen and (max-width: 991px) {
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+.comp-img-box {
+  @include cen-mid;
+  width: 150px;
+  height: 150px;
+  border: 1px solid $grey;
+}
+.comp-img {
+  width: 135px;
+  max-height: 135px;
+}
+.goComp {
+  margin-top: 20px;
+}
+.goComp-text {
+  margin: 0 5px;
+  font-weight: bold;
+  color: $d-blue;
+}
+.comp-detail {
+  @include cen-between;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+.comp-detail-title {
+  flex-basis: 150px;
+  font-weight: bold;
+}
+.comp-detail-border {
+  height: 1px;
+  width: 100%;
+  background: $grey;
+}
+.comp-detail-text {
+  @include cen;
+  width: 75%;
+  float: left;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+.comp-detail-icon {
+  margin-right: 15px;
+}
+.comp-trade-box {
+  display: inline-block;
+}

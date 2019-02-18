@@ -1,0 +1,156 @@
+@import "common";
+.px-15 {
+  font-size: 15px;
+}
+.padding-bottom-40 {
+  padding-bottom: 40px;
+}
+.margin-bottom-18 {
+  margin-bottom: 18px;
+}
+.padding-tow-30 {
+  padding: 0 30px;
+}
+.a {
+  width: 100px;
+  padding: 0 15px 10px;
+}
+.control {
+  border-bottom: 3px solid #fc2b47;
+  color: #fc2b47;
+}
+.control:hover {
+  color: #fc2b47;
+}
+.company-detail-card {
+  @include align-center;
+  margin: 20px -15px 40px;
+  background-color: #fff;
+}
+.company-detail {
+  background-color: #f6f7f8;
+}
+.card-logo {
+  @include cen-cen;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #e8e8e8;
+}
+.card-text {
+  margin-left: 30px;
+}
+.company-name {
+  font-size: .18rem;
+  font-weight: bold;
+}
+.company-slogan {
+  margin: 20px 0 40px;
+  font-size: .14rem;
+  color: #566a81;
+}
+
+.company-detail-content {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.btn-tab {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.company-production-title {
+  border-left: 4px solid #fc2b47;
+  margin: 20px 0;
+}
+//公司详情右侧内容
+.company_body_info {
+  margin: 20px 0;
+  padding: 0 40px 0 70px;
+  border-left: 3px solid #f4f4f4;
+}
+.com-information {
+  padding: 20px 0 40px 20px;
+}
+.com-information-second {
+  padding: 20px 10px;
+}
+.tag {
+  padding: 0 10px;
+  margin: 10px 5px;
+  border: 1px solid #999;
+  border-radius: 12px;
+}
+@media screen and (min-width:768px) and (max-width:992px){
+  .company_body_info {
+    margin: 20px 0;
+    padding: 0 30px;
+  }
+  .com-information {
+    padding: 30px 0 40px 20px;
+  }
+  .com-information-second {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company_body_info {
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+  }
+}
+
+//公司产品部分
+.companyProductSlogan{
+  width: 150px;
+  height: 150px;
+}
+.padding-10-0-10-30 {
+  padding: 10px 0 10px 30px;
+}
+.bold-18px {
+  font-size: 18px;
+  font-weight: bold;
+}
+.margin-20px-0 {
+  margin: 20px 0;
+}
+
+//在招职位部分
+.recruit {
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 25px;
+  margin-bottom: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+//职位
+.post{
+  display: inline-block;
+  vertical-align: middle;
+  width: 25%;
+  font-size: 16px;
+  font-weight: 700;
+}
+.recrui-compensation {
+  margin-left: 5%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fc2b47;
+}
+.recrui-experience {
+  margin-left: 5%;
+  font-size: 14px;
+}
+.recrui-experience-s {
+  margin-left: 5%;
+  font-size: 14px;
+}
+@media screen and (min-width:992px) {
+  .recrui-experience {
+    width: 107px;
+  }
+  .recrui-compensation {
+    width: 47px;
+  }
+}
