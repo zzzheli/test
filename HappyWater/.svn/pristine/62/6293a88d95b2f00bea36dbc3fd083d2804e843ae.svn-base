@@ -1,0 +1,60 @@
+<div class="loginContent backpack">
+    <div class="head" >
+        <i class="fa fa-chevron-left prePage pull-left fa-lg " onclick="history.go(-1)"></i>
+        立即购买
+    </div>
+
+    <div class="boxRow">
+        <div style="margin: 0 0 10px;">购买金额（元）:</div>
+        <div class="col-md-8">
+            <input type="number"
+                   ng-model="vm.moneyAmount"
+                   ng-change="vm.inReckon()"
+                   class="form-control font-size-normal"
+                   onkeyup="this.value=this.value.replace(/\D/g,'')"
+                   onafterpaste="this.value=this.value.replace(/\D/g,'')"\
+                   placeholder="{{vm.minAmount}}元起投，最小增减金额为{{vm.minIncrement}}元。"
+                   required/>
+        </div>
+        <div style="margin: 10px 0 0;">预期收益（元）:{{vm.exRevenue | number:2}}</div>
+    </div>
+
+    <!--<div class="boxRow">-->
+        <!--<div ng-click="modePay()">-->
+            <!--<span>支付方式</span>-->
+            <!--<i class="fa fa-chevron-right pull-right fa-lg "></i>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="boxRow">
+        <span>支付方式：</span>
+            <select class="select form-control modePay font-size-normal" ng-model="vm.cardInfo">
+                <option ng-repeat="x in vm.cardList" class="font-size-small">{{x.type | cardType}} &#8195 {{x.card | encrypt}}</option>
+            </select>
+    </div>
+
+    <div class="boxRow">
+        <div ng-click="vm.addBank()">
+            <span>添加银行卡</span>
+            <i class="fa fa-chevron-right pull-right fa-lg lineHeight_60 "></i>
+        </div>
+    </div>
+
+    <div class="boxRow">
+        <div>
+            <label>
+                <input type="checkbox" id="agreement" required="" class="agreeCheckbox"/>
+                <span>我已阅读并同意</span>
+            </label>
+            <a ng-click="vm.myCompact()">《聚金融投资合同》</a>
+        </div>
+    </div>
+
+
+    <button  type="button" class="buyConfirm" ng-click="vm.buyConfirm()" >确认购买</button>
+
+
+
+
+
+</div>

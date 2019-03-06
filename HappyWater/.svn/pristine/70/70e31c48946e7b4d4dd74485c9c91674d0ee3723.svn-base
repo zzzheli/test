@@ -1,0 +1,35 @@
+<div class="home">
+    <div class="nav">
+        <div class="topic pull-left">
+            <h2>HappyWater</h2>
+        </div>
+        <div class="nav-bar pull-right">
+            <ul>
+                <li class="user-name pull-left" ng-click="vm.clickuser()">欢迎回来，{{vm.admin.account}}！</li>
+                <!--不显示角色名-->
+                <li class="role-name pull-left" ng-click="vm.clickrole()"><i class="fa fa-user-o"></i> {{vm.admin.roleName}}</li>
+                <li class="logout pull-left" ng-click="vm.logout()"><i class="fa fa-power-off"></i>&nbsp;注销</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar pull-left">
+        <div class="home-border">
+            <sidebar>
+                <li class="panel-title father-title">
+                    <div class="home-page" ng-click="vm.goHome()">
+                        <span class="pull-left fa fa-home"></span>
+                        <span class="title-text">欢迎页</span>
+                        <i></i>
+                    </div>
+                </li>
+            </sidebar>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div ui-view class="pull-left contain">
+            <h2 align="center" class="welcome">快乐，就完事儿了~</h2>
+            <img src="../../imgs/happy.jpg" class="happy">
+        </div>
+    </div>
+
+</div>

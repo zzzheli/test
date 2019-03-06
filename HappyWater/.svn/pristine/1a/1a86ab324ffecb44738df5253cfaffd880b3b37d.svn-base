@@ -1,0 +1,28 @@
+<div class="loginContent loginPage">
+    <div class="head" >
+        <i class="fa fa-chevron-left prePage pull-left fa-lg" onclick="history.go(-1)"></i>
+        登录
+    </div>
+    <form class="bg clearfix" ng-init="phoneNumber='15132088479';passWord='a15132088479'">
+        <img src="../imgs/logo.png" class="logo"/>
+        <div class="user">
+            <i class="fa fa-mobile pull-left little-icon"></i>
+            <input type="search" ng-model="vm.phoneNumber" class="bor" placeholder="请输入您的手机号"/>
+        </div>
+        <div class="psw">
+            <i class="fa fa-unlock-alt  pull-left little-icon"></i>
+            <input type="{{vm.faEye ? 'password' : 'text'}}" ng-model="vm.passWord" class="bor"  placeholder="密码"/>
+            <i class="fa fa-eye pull-right "
+            ng-click="vm.faEye = !vm.faEye"
+            ng-class="{'fa-eye-slash':vm.faEye}"
+            ng-model="vm.faEye"></i>
+        </div>
+        <p class="warn" ng-bind='vm.warn'></p>
+        <button  type="submit" class="login"  ng-click="vm.logBtn()">登录</button>
+        <small class="pull-left" ng-click="vm.registe()">立即注册</small>
+        <small class="pull-right" ng-click="vm.forget()" >忘记密码</small>
+    </form>
+</div>
+
+
+

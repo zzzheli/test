@@ -1,0 +1,44 @@
+<div class="addBankCard_step1 sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">添加银行卡</span>
+        </div>
+        <form name="addCardForm">
+            <ul class="verify_list">
+                <li class="verify_item flex-none">
+                    <p>请绑定持卡人本人的银行卡（仅支持储蓄卡，绑卡数量仅限2张）。</p>
+                </li>
+                <li class="verify_item support">
+                    <div><span ui-sref="support">查看支持银行</span></div>
+                </li>
+                <li class="verify_item">
+                    <span>持卡人：</span>
+                    <span ng-bind="vm.realName"></span>
+                </li>
+                <li class="verify_item">
+                    <span>身份证：</span>
+                    <span ng-bind="vm.idCard | ID"></span>
+                </li>
+                <li class="verify_item">
+                    <span class="flex-none">卡&emsp;号：</span>
+                    <input type="text"
+                           class="form-control font-size-normal"
+                           placeholder="无需网银/免手续费"
+                           autocomplete="off"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           ng-model="vm.userBankCard"
+                           minlength="16"
+                           maxlength="19"
+                           required>
+                </li>
+                <li class="padding_0">
+                    <button class="next_step complete_verify"
+                            ng-disabled="addCardForm.$invalid"
+                            ng-click="vm.confirmCard()">下一步</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>

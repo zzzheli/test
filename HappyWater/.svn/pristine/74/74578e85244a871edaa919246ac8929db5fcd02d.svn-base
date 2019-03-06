@@ -1,0 +1,26 @@
+<div class="usingHelp sub_page  moveToLoad"  when-scrolled="vm.loadMore()">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">使用帮助</span>
+        </div>
+        <div class="helps" ng-if="vm.helps.length">
+            <p>常见问题：</p>
+            <ul class="help_list">
+                <li class="help_item" ng-repeat="x in vm.helps">
+                    <p>Q{{x.id}}：{{x.question}}</p>
+                    <p>A：{{x.answer}}</p>
+                </li>
+            </ul>
+        </div>
+        <div ng-if="!vm.helps.length">
+            <p align="center">使用帮助为空</p>
+        </div>
+        <div class="service">
+            <p align="center">
+                <i class="fa fa-volume-control-phone"></i>
+                客服热线：<a href="tel:4000000000">400-000-0000</a>
+            </p>
+        </div>
+    </div>
+</div>

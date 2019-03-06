@@ -1,0 +1,116 @@
+.financialList{
+    position: relative;
+    min-height: calc(100vh - 230px);
+}
+
+.financeRow {
+    display: flex;
+    font-size: 32px;
+    align-self: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 20px 50px 20px 50px;
+}
+.productItem{
+    text-align: center;
+}
+.productName {
+    font-size: 1.1em;
+    padding: 8px 0;
+}
+.productDivide{
+    width: 50%;
+    text-align: center;
+    border-left: 2px solid #d9d9d9;
+    padding-left: calc(50% - 230px)
+}
+
+.proProfit {
+    color: #d7a85e;
+    font-size: 1.5em;
+}
+
+.financeTip, .investmentCycle {
+    color: #999;
+}
+
+/*-----------------------------------*/
+
+.proContent {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+.proRow {
+    display: flex;
+    justify-content: space-around;
+    font-size: 34px;
+    border-bottom: 1px solid #d79937;
+    padding: 20px 15px;
+}
+.productInfo{
+    position: relative;
+    width: 96%;
+    min-height: calc(100vh - 570px);
+    padding: 20px;
+    margin: auto;
+    font-size: 30px;
+}
+.itemContent{
+    margin-left: 70px;
+}
+.invest-record{
+    text-align: center;
+}
+.buyNow {
+    position: fixed;
+    /*margin: 0 auto;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 750px;
+    line-height: 80px;
+    border-radius: 0;
+    font-size: 36px;
+    background-color: #d7a85e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+/*.buyInput {*/
+    /*width: 100%;*/
+/*}*/
+
+.buyConfirm {
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 38px;
+    margin: 30px auto 50px;
+    background: #d7a85e;
+    color: #fff;
+}
+
+.introTxt {
+    color: #666;
+    line-height: 58px;
+}
+
+.boxRow {
+    padding: 20px 20px;
+    font-size: 36px;
+    border-bottom: 1px solid #d7a85e;
+}
+.borInput{
+    border: 0;
+    outline: none;
+}
+/*.widInput{*/
+    /*width: calc(100% - 150px);*/
+/*}*/
+.modePay{
+    display: inline-block;
+    width: calc(100% - 205px);
+}

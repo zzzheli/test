@@ -1,0 +1,22 @@
+<div class="loginContent">
+    <div class="head" >
+        理财列表
+    </div>
+    <div when-scroll-top="vm.refreshOnce()" class="moveToRefresh financialList">
+       <div class="backpack">
+           <div ng-repeat = "x in vm.finances" class="financeRow" ng-click="vm.product(x)">
+               <div class="productItem">
+                   <div class="productName">{{x.productName}}</div>
+
+                   <div class="investmentCycle" >{{x.investmentCycle}}天</div>
+               </div>
+
+               <div class="productDivide">
+                   <div class="proProfit">{{x.proProfit}}%</div>
+
+                   <div class="financeTip">预期年化收益率</div>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>

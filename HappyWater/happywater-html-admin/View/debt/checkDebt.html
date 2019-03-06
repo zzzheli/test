@@ -1,0 +1,34 @@
+<div>
+    <div class="primary-list">
+        <div class="list-title" >
+            <span class="list-title-text">债权查看</span>
+            <button class="btn btn-default pull-right" onclick="history.go(-1)">返回</button>
+        </div>
+        <div class="panel-body table-responsive">
+            <form class="form-horizontal" name="myForm" novalidate>
+                <div class="form-group">
+                    <label class="col-md-2 ">已匹配债权：</label>
+                    <div class="col-md-8">
+                        <div>
+                            <span>债权ID:{{vm.companySerialId}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 ">投资详情：</label>
+                    <div class="col-md-8">
+                        <div ng-repeat="x in vm.checkList" ng-if="vm.checkList.length">
+                            <span>序号{{$index + 1}}：</span>
+                            <span>投资合同ID：{{x.serialId}}</span>
+                            <span>投资金额：{{x.amount}}元</span>
+                            <span>理财期限：{{x.financialTime}}天</span>
+                        </div>
+                        <div ng-if="!vm.checkList.length">该债权暂无匹配投资</div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

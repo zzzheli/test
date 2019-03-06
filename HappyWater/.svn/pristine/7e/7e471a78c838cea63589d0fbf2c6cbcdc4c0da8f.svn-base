@@ -1,0 +1,75 @@
+<div class="changPwd sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">修改密码</span>
+        </div>
+        <div class="container padding_0 margin_0 m-width">
+            <form name="change_pwd"
+                  class="change_pwd_input"
+                  novalidate ng-submit="vm.submitForm(change_pwd.$valid)">
+                <div class="old_password row margin_0">
+                    <div class="col-xs-4 padding_0 lineHeight_60 required">旧&nbsp;&nbsp;密&nbsp;&nbsp;码:</div>
+                    <div class="col-xs-8 padding_0">
+                        <input type="password"
+                               name="oldPwd"
+                               class="form-control font-size-small"
+                               placeholder="若包含字母，请注意区分大小写"
+                               autocomplete="off"
+                               minlength="8"
+                               maxlength="16"
+                               required
+                               ng-model="vm.oldPassword">
+                    </div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-8 padding_0">
+                        <p id="msg" class="msg error_tip" ng-bind="vm.oldMessage"></p>
+                    </div>
+                </div>
+                <div class="new_password row margin_0">
+                    <div class="col-xs-4 padding_0 lineHeight_60 required">新&nbsp;&nbsp;密&nbsp;&nbsp;码:</div>
+                    <div class="col-xs-8 padding_0">
+                        <input type="password"
+                               name="newPwd"
+                               class="form-control font-size-small"
+                               placeholder="8-16位,至少含数字/字母/字符2种"
+                               autocomplete="off"
+                               minlength="8"
+                               maxlength="16"
+                               ng-model="vm.newPassword"
+                               required>
+                    </div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-8 padding_0 error_tip">
+                        <p class="error_tip" ng-bind="vm.newMessage"></p>
+                    </div>
+                </div>
+                <div class="confirm_password row margin_0">
+                    <div class="col-xs-4 padding_0 lineHeight_60 required">确认密码:</div>
+                    <div class="col-xs-8 padding_0">
+                        <input type="password"
+                               class="form-control font-size-small"
+                               placeholder="请再次输入你的新密码"
+                               autocomplete="off"
+                               minlength="8"
+                               maxlength="16"
+                               ng-model="vm.confirmPassword"
+                               required>
+                    </div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-8 padding_0 error_tip">
+                        <p class="error_tip" ng-bind="vm.confirmMessage"></p>
+                    </div>
+                </div>
+                <div class="confirm_btn">
+                    <button type="submit"
+                            class="btn btn-warning font-size-big"
+                            ng-disabled="change_pwd.$invalid"
+                            ng-click="vm.submit()">
+                        &nbsp;确&emsp;认&nbsp;
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

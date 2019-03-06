@@ -1,0 +1,21 @@
+.debtBox {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 11px;
+    text-align: center;
+    cursor: pointer;
+}
+.bgBlue{
+    background-color: #00ccff;
+}
+.bgGrey{
+    background-color: lightgrey;
+}
+.debtWarn{
+    margin: 5px auto -10px;
+    color: #f00;
+}

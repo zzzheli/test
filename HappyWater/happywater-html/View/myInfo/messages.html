@@ -1,0 +1,20 @@
+<div class="messages sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">消息中心</span>
+        </div>
+        <ul class="message_list" ng-if="vm.messages.length">
+            <li class="message_item" ui-sref="viewMessage" ng-repeat="x in vm.messages">
+                <div class="msg_info">
+                    <p>{{x.title}}</p>
+                    <small>{{x.sendAt | date: 'yyyy-MM-dd HH:mm:ss'}}</small>
+                </div>
+                <div class="read_status"><span>{{x.isRead | unread}}</span></div>
+            </li>
+        </ul>
+        <div ng-if="!vm.messages.length">
+            <p align="center" class="msgContent">暂无消息记录</p>
+        </div>
+    </div>
+</div>

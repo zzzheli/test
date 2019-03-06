@@ -1,0 +1,24 @@
+#home{
+    font-size: 38px;
+}
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*background-color: #fff;*/
+}
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+}
+.recommendation{
+    min-height: calc(100vh - 626px);
+    background-color: #fff;
+}
+.recommendation .goShop{
+    width: 300px;
+    line-height: 80px;
+    font-size: 38px;
+    border-radius: 20px;
+}

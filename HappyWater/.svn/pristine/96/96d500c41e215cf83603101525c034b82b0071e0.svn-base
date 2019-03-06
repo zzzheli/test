@@ -1,0 +1,50 @@
+<div class="myInfo sub_page">
+    <div class="info_box">
+        <div class="btn_group clearfix">
+            <button class="pull-left" ng-click="vm.setting()">
+                <i class="fa fa-cog fa-lg"></i></button>
+            <button class="pull-right" style="position: relative;" ng-click="vm.messages()">
+                <i class="fa fa-commenting-o fa-lg"></i>
+                <div class="unread" ng-show="vm.unreadCount > 0" ng-bind="vm.unreadCount"></div>
+            </button>
+        </div>
+        <div class="summary" ng-click="vm.information()">
+            <div class="avatar"></div>
+            <div class="user_info">
+                <div class="real_name" ng-bind="vm.userInfo.realName"></div>
+                <div class="phone_num" ng-bind="vm.userInfo.phoneNumber"></div>
+            </div>
+            <div><i class="fa fa-angle-right fa-2x"></i></div>
+        </div>
+    </div>
+    <div class="func">
+        <ul class="func_list">
+            <li class="func_item" ng-click="vm.user_finance()">
+                <i class="fa fa-money fa-lg info-icon"></i>
+                <span class="item_text">我的理财</span>
+                <span class="money" ng-bind="vm.userInfo.balance | number:2"></span>
+                <i class="fa fa-angle-right fa-2x"></i>
+            </li>
+            <li class="func_item" ng-click="vm.user_record()">
+                <i class="fa fa-wpforms fa-lg info-icon"></i>
+                <span class="item_text">交易记录</span>
+                <i class="fa fa-angle-right fa-2x"></i>
+            </li>
+            <li class="func_item" ng-click="vm.user_card()">
+                <i class="fa fa-credit-card fa-lg info-icon"></i>
+                <span class="item_text">银行卡</span>
+                <i class="fa fa-angle-right fa-2x"></i>
+            </li>
+            <li class="func_item" ng-click="vm.using_help()">
+                <i class="fa fa-question-circle-o fa-lg info-icon"></i>
+                <span class="item_text">使用帮助</span>
+                <i class="fa fa-angle-right fa-2x"></i>
+            </li>
+            <li class="func_item" ng-click="vm.user_suggest()">
+                <i class="fa fa-file-text-o fa-lg info-icon"></i>
+                <span class="item_text">意见反馈</span>
+                <i class="fa fa-angle-right fa-2x"></i>
+            </li>
+        </ul>
+    </div>
+</div>

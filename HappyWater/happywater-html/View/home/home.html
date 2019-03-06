@@ -1,0 +1,16 @@
+<div id="home" class="sub_page">
+    <div class="banner">
+        <swipers data="vm.bannerList"></swipers>
+    </div>
+    <div class="recommendation">
+        <br><br>
+        <p align="center" ng-bind="vm.recommend.productName"></p>
+        <p align="center"><span ng-bind="vm.recommend.proProfit"></span>%<br>年化收益率</p>
+        <p align="center">
+            <small>起投金额<span ng-bind="vm.recommend.minAmount"></span>元&nbsp;&nbsp;&nbsp;&nbsp;限额<span ng-bind="vm.recommend.maxAmount"></span>元</small>
+        </p>
+        <div align="center">
+            <button class="btn-warning btn-lg goShop">立即起购</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="primary-list">
+    <div class="list-title" >
+        <span class="list-title-text">交易记录</span>
+        <button class="btn btn-default pull-right" onclick = "history.go(-1)">返回</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <th>交易记录ID</th>
+        <th>真实姓名</th>
+        <th>手机号</th>
+        <th>产品名称</th>
+        <th>投资金额(元)</th>
+        <th>交易时间</th>
+        <th>交易类型</th>
+        <th>状态</th>
+        <th>交易方式</th>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in vm.dealList">
+            <td>{{x.serialId}}</td>
+            <td>{{x.user.realName}}</td>
+            <td>{{x.user.phoneNum}}</td>
+            <td>{{x.product.productName}}</td>
+            <td>{{x.investment}}</td>
+            <td>{{x.createdAt | date: 'yyyy-MM-dd'}}</td>
+            <td>{{x.dealingType  | dealType}}</td>
+            <td>成功</td>
+            <td>余额</td>
+        </tr>
+        </tbody>
+    </table>
+    <pagination></pagination>
+</div>

@@ -1,0 +1,11 @@
+<div class="viewMsg sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">消息回复!</span>
+        </div>
+        <div class="msgContent">
+            <p class="indent">修真院是北京葡萄藤信息技术有限公司旗下的互动式教学平台，相比于传统的文档预览，文字分享、在线视频等被动教育模式， 修真院联合数十位业界大咖，亲临实战，保证课程体系独家研发，融入真实项目，紧跟最新技术，化繁为简，只教有用 的，只教实践的。无论你是初涉程序的小白，将入职场的菜鸟，还是已有建树的行家，我们都希望与你并肩阔步，见证你的成长，分享你 成功的喜悦。</p>
+        </div>
+    </div>
+</div>

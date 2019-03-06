@@ -1,0 +1,104 @@
+<div class="primary-list">
+    <div class="list-title" >
+        <span class="list-title-text">{{vm.pageTitle}}</span>
+        <button class="btn btn-default pull-right" onclick="history.go(-1)">返回</button>
+    </div>
+
+    <div class="panel-body table-responsive">
+        <form class="form-horizontal" name="myForm" novalidate>
+            <div class="form-group">
+                <label class="col-md-2 ">产品名称</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.productName"
+                           class="form-control"
+                           placeholder="请输入产品名称（2~10个汉字）"
+                           required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">预期年利率（%）</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.proProfit"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入预期年利率（百分比，仅保留一位小数点）"
+                           required/>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">投资周期（天）</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.investmentCycle"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入投资周期（数字组成的整数）"
+                           required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">起投金额（元）</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.minAmount"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入起投金额（数字组成的整数）"
+                           required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">最小增减金额（元）</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.minIncrement"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入最小增减金额（数字组成的整数）"
+                           required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 word-spacing-25">还款方式</label>
+                <div class="col-md-2">
+                    <select class="select form-control"
+                            ng-model="vm.repaymentWay"
+                            name="status" required>
+                        <option ng-repeat="x in vm.reType" value="{{x.value}}" >{{x.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">产品简介</label>
+                <div class="col-md-8">
+                    <textarea type="text"
+                              ng-model="vm.productIntro"
+                              class="form-control"
+                              placeholder="请详细描述您要填写的内容。（限制字数100字以内）"
+                              required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">更多信息</label>
+                <div class="col-md-8">
+                    <textarea type="text"
+                              ng-model="vm.moreInformation"
+                              class="form-control"
+                              placeholder="请详细描述您要填写的内容。（限制字数100字以内）"
+                              name="title" required></textarea>
+                </div>
+            </div>
+            <div>
+                <span class="btn btn-default" ng-click="vm.savePro()" ng-disabled="myForm.$invalid">保存</span>
+                <span class="btn btn-default" onclick="history.go(-1)">取消</span>
+            </div>
+        </form>
+    </div>
+</div>

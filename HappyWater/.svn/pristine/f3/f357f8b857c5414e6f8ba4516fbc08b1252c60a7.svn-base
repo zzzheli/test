@@ -1,0 +1,7 @@
+<div>
+    <div class="loading">
+        <div class="copy">
+            <img src="../../../imgs/loader.svg" width="300">
+        </div>
+    </div>
+</div>

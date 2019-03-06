@@ -1,0 +1,27 @@
+<div class="suggest sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">意见反馈</span>
+        </div>
+        <div class="suggestion_img">
+            <img src="../../imgs/suggestion.jpg">
+        </div>
+        <form name="suggestForm">
+            <div class="feed_back">
+                <textarea name="feedBack"
+                          id="feedBack"
+                          class="form-control feedBack"
+                          ng-maxlength="100"
+                          ng-model="vm.suggestion"
+                          placeholder="请详细描述您的问题或建议，我们将及时跟进解决。（限制字数100字以内）">
+                </textarea>
+                <p class="lineHeight-34 next_page">{{vm.suggestion.length || 0}}/100</p>
+                <p class="error_tip next_page" ng-hide="!suggestForm.$invalid">字数输入超过上限，请重新编辑。</p>
+                <button class="btn btn-warning pull-right margin-right font-size-big"
+                        ng-disabled="suggestForm.$invalid"
+                        ng-click="vm.submitSuggestion()"> 提 交 </button>
+            </div>
+        </form>
+    </div>
+</div>

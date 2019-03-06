@@ -1,0 +1,27 @@
+<div class="loginContent">
+    <div ui-view></div>
+    <footer class="footList">
+        <nav>
+            <ul class="nav_tab_head">
+                <li class="home" ng-click="vm.homeDetail()">
+                    <a ng-class="{'highLight': navCoa}">
+                        <i class="fa fa-home icon"></i>
+                        <samll>首页</samll>
+                    </a>
+                </li>
+                <li class="financing" ng-click="vm.financial()"  >
+                    <a  ng-class="{'highLight': navCob}">
+                        <i class="fa fa-bar-chart icon"></i>
+                        <small>理财</small>
+                    </a>
+                </li>
+                <li class="my" ng-click="vm.myInfo()" >
+                    <a ng-class="{'highLight': navCoc}">
+                        <i class="fa fa-user-circle-o icon"></i>
+                        <small>我的</small>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>

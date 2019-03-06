@@ -1,0 +1,44 @@
+<div class="loginContent backpack">
+    <div class="head" >
+        <i class="fa fa-chevron-left prePage pull-left fa-lg " onclick="history.go(-1)"></i>
+        确认购买
+    </div>
+
+    <div class="boxRow">
+        <div>购买金额（元）：{{vm.moneyAmount}}</div>
+    </div>
+
+    <div class="boxRow">
+        <div>银行卡号：{{vm.cardNum | bankNum}}</div>
+    </div>
+    <div class="boxRow">
+        <div>所属银行：{{vm.cardType | bankType}}</div>
+    </div>
+    <div class="boxRow">
+        <div>姓名：{{vm.realName}}</div>
+    </div>
+    <div class="boxRow">
+        <div>身份证号：{{vm.idCard}}</div>
+    </div>
+
+    <div class="boxRow" >
+        <span>手机号：</span>
+        <input   type="text" ng-model="vm.phoneNumber" class="borInput" placeholder="请输入银行预留手机号" ng-keyup="vm.valid()" maxlength="11">
+    </div>
+    <div class="boxRow flex">
+        <span class="lineHeight_60 flex-none">验证码：</span>
+        <verify-code code="vm.msgCode" class="margin-right"></verify-code>
+        <!--<input  type="text" ng-model="msgCode" class="borInput widInput" placeholder="请输入验证码" />-->
+        <countdown ng-click="vm.getCode()"></countdown>
+    </div>
+    <div class="boxRow">
+        <div>
+            <label>
+                <input type="checkbox" id="agreement" class="agreeCheckbox" required=""/>
+                <span>我已阅读并同意</span>
+            </label>
+            <a ui-sref="payment">《聚金融综合支付服务协议》</a>
+        </div>
+    </div>
+    <button  type="button" class="buyConfirm" ng-click="vm.payConfirm()" >确认支付</button>
+</div>

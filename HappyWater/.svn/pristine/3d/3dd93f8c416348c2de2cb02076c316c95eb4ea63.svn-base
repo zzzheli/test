@@ -1,0 +1,90 @@
+<div class="claim">
+    <div class="search">
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="col-lg-12">
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">债权ID：</div>
+                                <div class="col-md-8 col-xs-9"><input type="text" class="form-control" ng-model="vm.serialId"></div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">企业名称：</div>
+                                <div class="col-md-8 col-xs-9"><input type="text" class="form-control" ng-model="vm.companyName"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">债务人：</div>
+                                <div class="col-md-8 col-xs-9"><input type="text" class="form-control" ng-model="vm.debtPerson"></div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">状态：</div>
+                                <div class="col-md-8 col-xs-9">
+                                    <select class="select form-control" ng-model="vm.status" name="status" >
+                                        <option ng-repeat="x in vm.debtStatus" value="{{x.value}}" >{{x.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12">
+                        <div class="col-lg-12 col-xs-6 search-btn"><button class="btn btn-default" type="reset" ng-click = "vm.reset()">重置</button></div>
+                        <div class="col-lg-12 col-xs-6 search-btn"><button class="btn btn-primary" type="submit" ng-click = "vm.search()">查询</button></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="primary-list">
+        <div class="list-title">
+            <span class="list-title-text">债权列表</span>
+            <button class="btn btn-default pull-right"  ui-sref="home.newDebt">新增</button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <th>序号</th>
+                <th>债权ID</th>
+                <th>企业名称</th>
+                <th>债务人</th>
+                <th>手机号</th>
+                <th>身份证号码</th>
+                <th>借款金额（元）</th>
+                <th>借款期限（月）</th>
+                <th>借款日期</th>
+                <th>还款日期</th>
+                <th>待匹配金额</th>
+                <th>状态</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat = "x in vm.debtList">
+                <td>{{$index + 1}}</td>
+                <td>{{x.serialId}}</td>
+                <td>{{x.companyName}}</td>
+                <td>{{x.debtPerson}}</td>
+                <td>{{x.phoneNumber}}</td>
+                <td>{{x.idCardNum}}</td>
+                <td>{{x.borrowMoney}}</td>
+                <td>{{x.borrowingCycle}}</td>
+                <td>{{x.borrowingDate | date: 'yyyy-MM-dd'}}</td>
+                <td>{{x.repaymentDate | date: 'yyyy-MM-dd'}}</td>
+                <td>{{x.unmatchMoney}}</td>
+                <td>{{x.status | match}}</td>
+                <td>
+                    <button class="btn btn-default" ui-sref="home.checkDebt({id:x.id, serialId:x.serialId})">查看</button>
+                    <button class="btn btn-default" ui-sref="home.matching({id:x.id, serialId:x.serialId, borrowMoney:x.borrowMoney})">匹配</button>
+                    <!--{{x.status | line}}-->
+                    <button class="btn btn-primary" ui-sref="home.newDebt({id:x.id})">编辑</button>
+                    <button class="btn btn-danger" ng-click="vm.deleteDebt(x.id)">删除</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <pagination></pagination>
+</div>
+
+
+

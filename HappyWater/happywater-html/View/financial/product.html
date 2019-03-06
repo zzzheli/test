@@ -1,0 +1,104 @@
+<div class="loginContent backpack">
+    <div class="head" >
+        <i class="fa fa-chevron-left prePage pull-left fa-lg " onclick="history.go(-1)"></i>
+        {{vm.name}}
+    </div>
+
+    <div class="proContent" >
+        <div class="proProfit" style="margin: 10px 0" >{{vm.proProfit}}%</div>
+        <div class="financeTip" style="margin: 10px 0 20px">预期年化收益率</div>
+
+        <div class="proRow">
+            <div >
+                <div>投资周期</div>
+                <div>{{vm.investmentCycle}}天</div>
+            </div>
+
+            <div>
+                <div>起投金额</div>
+                <div>{{vm.minAmount}}</div>
+            </div>
+
+            <div>
+                <div>增减金额</div>
+                <div>{{vm.minIncrement}}</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="proRow">
+        <span ng-click="vm.productInfo('introduction')" >产品简介</span>
+        <span ng-click="vm.productInfo('moreInfo')" >更多信息</span>
+        <span ng-click="vm.productInfo('records')" >投资记录</span>
+    </div>
+
+    <div ng-switch on="vm.type">
+        <ul class="productInfo introTxt pointer first-item" ng-switch-when="introduction">
+            <li class="flex">
+                <span>
+                    <i class="fa fa-book pull-left fa-lg info-icon"></i>产品简介：
+                </span>
+                <p>{{name}}</p>
+            </li>
+            <li>
+                <span>
+                <i class="fa fa-money pull-left fa-lg info-icon"></i>收益规则：
+                </span>
+                <p class="itemContent">本产品起投金额为{{vm.minAmount}}，限额{{vm.maxAmount}}元，最小增减金额为{{vm.minIncrement}}元。仅支持本金续投，投资期限内不可提前退出，理财周期每个月以30天为准。</p>
+            </li>
+            <li class="flex">
+                <span>
+                    <i class="fa fa-tasks  pull-left fa-lg info-icon"></i>保障方式：
+                </span>
+                <p>聚金融承接债权，本息担保。</p>
+            </li>
+            <li class="flex">
+                <span>
+                    <i class="fa fa-credit-card  pull-left fa-lg info-icon"></i>还款方式：
+                </span>
+                <p>先息后本。</p>
+            </li>
+            <li>
+                <span>
+                    <i class="fa fa-calendar-check-o  pull-left fa-lg info-icon"></i>还款日期：
+                </span>
+                <p class="itemContent">每月还息固定每月20号，理财到期后返还本金。T(到期日)+1日(如遇周末及节假日，到期日顺延至周末及节假日后的第一个交易日)。</p>
+            </li>
+        </ul>
+
+        <ul class="productInfo introTxt pointer second-item" ng-switch-when="moreInfo">
+            <li>
+                <p class="indent">本项目为聚金融线下购买的企业债权，被购企业经营正常，证件齐全，
+                企业财物已抵押登记，现场核查人员已经过现场走访核实，并进行拍照留档。</p>
+            </li>
+            <li>
+                <p class="indent">本项目为企业资金周转借款，经风控中心严格审核，该笔项目予以通过。</p>
+            </li>
+            <li>
+                <p>【风险提示：理财有风险，投资需谨慎。】</p>
+            </li>
+        </ul>
+
+        <div class="productInfo introTxt pointer third-item moveToLoad"  when-scrolled="vm.loadMore()" ng-switch-when="records" >
+            <table class="table table-hover invest-record">
+                <thead>
+                <th class="invest-record">投资人</th>
+                <th class="invest-record">投资金额</th>
+                <th class="invest-record">投资时间</th>
+                </thead>
+
+                <tr ng-if="vm.recordsList.length" ng-repeat="x in vm.recordsList">
+                    <td>{{x.user.realName}}</td>
+                    <td>{{x.amount}}</td>
+                    <td>{{x.expireTime | date: 'yyyy-MM-dd'}}</td>
+                </tr>
+            </table>
+            <div ng-if="!vm.recordsList.length" align="center">暂无任何投资记录哦</div>
+        </div>
+    </div>
+
+    <div class="buyNow btn btn-warning" ng-click = "vm.buyNow()">
+        立即购买
+    </div>
+</div>

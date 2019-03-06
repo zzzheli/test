@@ -1,0 +1,25 @@
+<div class="record sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">交易记录</span>
+        </div>
+        <div class="records" ng-if="vm.records.length">
+            <ul class="record_list">
+                <li class="record_item" ng-repeat="x in vm.records">
+                    <div>
+                        <p>{{x.record}}</p>
+                        <p>{{x.money}}</p>
+                        <small>{{x.date}}</small>
+                    </div>
+                    <div>
+                        <span>{{x.status}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div ng-if="!vm.records.length">
+            <p class="msgContent" align="center">交易记录为空</p>
+        </div>
+    </div>
+</div>

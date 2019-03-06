@@ -1,0 +1,44 @@
+<div class="primary-list">
+    <div class="list-title" >
+        <span class="list-title-text">投资合同</span>
+        <button class="btn btn-default pull-right" onclick = "history.go(-1)">返回</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <th>投资合同ID</th>
+        <th>真实姓名</th>
+        <th>手机号</th>
+        <th>产品名称</th>
+        <th>投资金额(元)</th>
+        <th>预期收益(元)</th>
+        <th>生效时间</th>
+        <th>失效时间</th>
+        <th>状态</th>
+        <th>操作</th>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat = "x in vm.compactList">
+            <td>{{x.serialId}}</td>
+            <td>{{x.user.realName}}</td>
+            <td>{{x.user.phoneNum}}</td>
+            <td>{{x.product.productName}}</td>
+            <td>{{x.amount}}</td>
+            <td>{{x.profit}}</td>
+            <td>{{x.createdAt | date: 'yyyy-MM-dd'}}</td>
+            <td>{{x.expiredTime | date: 'yyyy-MM-dd'}}</td>
+            <td>{{x.status | comStatus}}</td>
+            <td>
+                <button class="btn btn-primary" ui-sref = "home.seeCompact({
+                amount:x.amount,
+                phoneNum:x.user.phoneNum,
+                realName:x.user.realName,
+                idCard:idCard
+                })">查看</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="padding:8px" ng-show="vm.noCompact">该用户暂无投资合同</div>
+    <pagination></pagination>
+</div>

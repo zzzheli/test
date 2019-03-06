@@ -1,0 +1,29 @@
+<div class="sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">验证手机号</span>
+        </div>
+        <form name="deleteForm" novalidate>
+            <div class="verify_tip">
+                本次操作需要短信验证，请输入{{vm.phoneNumber | phoneNum}}收到的短信验证码。
+            </div>
+            <div class="verify_code lineHeight_60">
+                <span class="flex-none">验证码：</span>
+                <verify-code code="vm.smsCode" class="margin-right"></verify-code>
+                <countdown ng-click="vm.getCode()"></countdown>
+            </div>
+            <div class="sms_tip">
+                <p>60s后可重新获取</p>
+            </div>
+            <div>
+                <button type="submit"
+                        class="complete_verify next_step"
+                        ng-disabled="deleteForm.$invalid"
+                        ng-click="vm.deleteDone()">
+                    下一步
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

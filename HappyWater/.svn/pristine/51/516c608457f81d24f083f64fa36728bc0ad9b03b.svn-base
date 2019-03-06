@@ -1,0 +1,10 @@
+<div>
+    <div calss="col-xs-4"
+         uib-timepicker
+         ng-model="timeNode"
+         ng-change="changed()"
+         hour-step="hstep"
+         minute-step="mstep"
+         show-meridian="ismeridian"
+    ></div>
+</div>

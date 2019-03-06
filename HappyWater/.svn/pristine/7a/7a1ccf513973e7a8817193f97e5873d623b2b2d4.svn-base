@@ -1,0 +1,98 @@
+<div class="myFinance sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">我的理财</span>
+        </div>
+        <div class="finance_nav">
+            <span class="nav_item invest" ng-click="vm.myClick('invest')">已投资</span>
+            <span class="nav_item refill" ng-click="vm.myClick('refill')">已续投</span>
+            <span class="nav_item quit" ng-click="vm.myClick('quit')">已退出</span>
+        </div>
+        <div class="finance_list" ng-switch on="vm.type">
+            <ul class="invest_list pointer first-item" ng-switch-when="invest" >
+                <li class="invest_item" ng-model="existProduct" ng-repeat="x in vm.financeList | filter:vm.investFilter">
+                    <div class="finance-info">
+                        <span>{{x.product.productName}}</span>
+                        <button class="btn btn-default font-size-normal"
+                                ng-disabled="{{x.status === 30 ? 'true' : 'false'}}"
+                                ng-click="vm.reservation(x)">{{x.status | Res}}</button>
+                    </div>
+                    <div class="nav_tab_head">
+                        <div>
+                            <p>预期年化收益率</p>
+                            <p>{{x.product.proProfit}}%</p>
+                        </div>
+                        <div>
+                            <p>持有金额</p>
+                            <p>{{x.amount}}</p>
+                        </div>
+                        <div>
+                            <p>预期收益</p>
+                            <p>{{x.profit}}</p>
+                        </div>
+                    </div>
+                    <div class="finance-info">
+                        <span>到期日期：{{x.expireTime | date: 'yyyy-MM-dd'}}</span>
+                        <button class="btn btn-default font-size-normal" ng-click="vm.myCompact(x)">查看合同</button>
+                    </div>
+                </li>
+                <p class="msgContent" ng-if="!(vm.financeList | filter:vm.investFilter).length">您还没有投资任何产品！</p>
+            </ul>
+            <ul class="refill_list pointer second-item" ng-switch-when="refill">
+                <li class="invest_item" ng-repeat="x in vm.financeList | filter:vm.refillFilter">
+                    <div class="finance-info">
+                        <span>{{x.product.productName}}</span>
+                        <button class="btn btn-default font-size-normal"
+                                ng-click="vm.reservation(x)">{{x.status | Res}}</button>
+                    </div>
+                    <div class="nav_tab_head">
+                        <div>
+                            <p>预期年化收益率</p>
+                            <p>{{x.product.proProfit}}%</p>
+                        </div>
+                        <div>
+                            <p>持有金额</p>
+                            <p>{{x.amount}}</p>
+                        </div>
+                        <div>
+                            <p>预期收益</p>
+                            <p>{{x.profit}}</p>
+                        </div>
+                    </div>
+                    <div class="finance-info">
+                        <span>到期日期：{{x.expireTime | date: 'yyyy-MM-dd'}}</span>
+                        <button class="btn btn-default font-size-normal " ng-click="vm.myCompact(x)">查看合同</button>
+                    </div>
+                </li>
+                <p class="msgContent" ng-if="!(vm.financeList | filter:vm.refillFilter).length">您还没有续投任何产品！</p>
+            </ul>
+            <ul class="quit_list pointer third-item" ng-switch-when="quit">
+                <li class="invest_item" ng-repeat="x in vm.financeList | filter:vm.quitFilter">
+                    <div class="finance-info">
+                        <span>{{x.product.productName}}</span>
+                    </div>
+                    <div class="nav_tab_head">
+                        <div>
+                            <p>预期年化收益率</p>
+                            <p>{{x.product.proProfit}}%</p>
+                        </div>
+                        <div>
+                            <p>持有金额</p>
+                            <p>{{x.amount}}</p>
+                        </div>
+                        <div>
+                            <p>预期收益</p>
+                            <p>{{x.profit}}</p>
+                        </div>
+                    </div>
+                    <div class="finance-info">
+                        <span>到期日期：{{x.expireTime | date: 'yyyy-MM-dd'}}</span>
+                        <button class="btn btn-default font-size-normal" ng-click="vm.myCompact(x)">查看合同</button>
+                    </div>
+                </li>
+                <p class="msgContent" ng-if="!(vm.financeList | filter:vm.quitFilter).length">您还没有退出投资的产品！</p>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+
+<div class="loginContent loginPage">
+    <div class="head" >
+        <i class="fa fa-chevron-left prePage pull-left fa-lg" onclick="history.go(-1)"></i>
+        注册
+    </div>
+    <form class="bg clearfix" >
+        <img src="../imgs/logo.png"  class="logo"/>
+        <div class="shade" ng-show="show" >
+            <div class="shadeTip">
+                <div>账号注册成功！</div><div>3S后将自动跳转至首页</div>
+            </div>
+        </div>
+        <div class="psw">
+            <i class="fa fa-unlock-alt  pull-left little-icon"></i>
+            <input type="{{vm.faEyeF ? 'password' : 'text'}}"
+                   ng-model="vm.firstPassword"
+                   class="bor" maxlength="18"
+                   ng-minlength="6"
+                   autocomplete="off"
+                   placeholder="请设置密码(8~18位)"/>
+            <i class="fa fa-eye pull-right "
+               ng-click="vm.faEyeF = !vm.faEyeF"
+               ng-class="{'fa-eye-slash':vm.faEyeF}"
+               ng-model="vm.faEyeF"></i>
+        </div>
+        <div class="psw">
+            <i class="fa fa-lock pull-left little-icon"></i>
+            <input type="{{vm.faEyeS ? 'password' : 'text'}}"
+                   ng-model="vm.secondPassword"
+                   class="bor" maxlength="18"
+                   ng-minlength="6"
+                   autocomplete="off"
+                   placeholder="请确认密码" />
+            <i class="fa fa-eye pull-right "
+               ng-click="vm.faEyeS = !vm.faEyeS"
+               ng-class="{'fa-eye-slash':vm.faEyeS}"
+               ng-model="vm.faEyeS"></i>
+        </div>
+        <p class="warn"   ng-bind='vm.warn'></p>
+        <div class="font-size-small flex">
+            <label>
+                <input type="checkbox" class="agreeCheckbox">
+                <span>我已阅读并同意</span>
+            </label>
+            <a ng-click="vm.userAgrt()">《聚金融用户协议》</a>
+        </div>
+        <button  type="button" class="login" ng-click="vm.regSetBtn()">注册</button>
+    </form>
+</div>
+
+
+
+
+
+

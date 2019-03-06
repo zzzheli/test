@@ -1,0 +1,15 @@
+<div class="about_us sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">关于我们</span>
+        </div>
+        <div class="about_page">
+            <img src="../../../imgs/aboutUs.jpg">
+            <div class="about_content">
+                <p align="center" class="font-size-big">聚金融简介</p>
+                <p style="text-indent: 2em;">聚金融是国内的一站式智能投融平台，多家知名券商、银行、基金机构战略联盟合作伙伴，依托多年积累的资本、人脉资源，为客户提供投融前数据分析、资源撮合对接、人才教育培训、投融后管理等一站式投融资整合连接服务。</p>
+            </div>
+        </div>
+    </div>
+</div>

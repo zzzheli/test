@@ -1,0 +1,112 @@
+<div class="account">
+    <div class="search">
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="col-lg-12">
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">账户ID：</div>
+
+                                <div class="col-md-8 col-xs-9">
+                                    <input type="text"
+                                           class="form-control"
+                                           ng-model="vm.accountId">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">角色：</div>
+                                <div class="col-md-8 col-xs-9">
+                                    <select ng-model="vm.role"
+                                            class="select form-control"
+                                            id="selectRole">
+                                        <option ng-value="undefined"></option>
+                                        <option class="form-control"
+                                                ng-repeat="x in vm.roles"
+                                                value="{{x}}">
+                                            {{x}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">账户名：</div>
+                                <div class="col-md-8 col-xs-9">
+                                    <input type="text"
+                                           class="form-control"
+                                           ng-model="vm.accountName">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 search-items">
+                                <div class="col-md-4 col-xs-3 search-item">创建人：</div>
+                                <div class="col-md-8 col-xs-9">
+                                    <input type="text"
+                                           class="form-control"
+                                           ng-model="vm.creator">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12">
+                        <div class="col-lg-12 col-xs-6 search-btn">
+                            <button class="btn btn-default" ng-click="vm.reset()">重置</button>
+                        </div>
+                        <div class="col-lg-12 col-xs-6 search-btn">
+                            <button class="btn btn-primary" ng-click="vm.search()">查询</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="primary-list">
+        <div class="list-title">
+            <span class="list-title-text">账户列表</span>
+            <button class="btn btn-default pull-right" ui-sref="home.newAccount">新增</button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+            <th>序号</th>
+            <th>账户ID</th>
+            <th>账户名</th>
+            <th>角色</th>
+            <th>创建人</th>
+            <th>创建时间</th>
+            <th>更新人</th>
+            <th>更新时间</th>
+            <th>状态</th>
+            <th>操作</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in vm.accountList">
+                <td>{{$index + 1}}</td>
+                <td>{{x.serialId}}</td>
+                <td>{{x.account}}</td>
+                <!--<td>{{x.roles[0].roleName}}</td>-->
+                <td>
+                    <!--<div ng-repeat="y in x.roles">{{y.roleName}}</div>-->
+                    <div>{{x.roles[0].roleName}}</div>
+                </td>
+                <td>{{x.createdBy}}</td>
+                <td>
+                    <div>{{x.createdAt | date: 'yyyy-MM-dd'}}</div>
+                    <div>{{x.createdAt | date: 'HH:mm:ss'}}</div>
+                </td>
+                <td>{{x.updatedBy}}</td>
+                <td>
+                    <div>{{x.updatedAt | date: 'yyyy-MM-dd'}}</div>
+                    <div>{{x.updatedAt | date: 'HH:mm:ss'}}</div>
+                </td>
+                <td>{{x.locked | lock}}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="vm.editAccount(x.id)">编辑</button>
+                    <button class="btn btn-danger" ng-click="vm.deleteAccount(x.id)">删除</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <pagination></pagination>
+</div>

@@ -1,0 +1,26 @@
+<div class="setting sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">设置</span>
+        </div>
+        <ul class="setting_list">
+            <li class="setting_item" ng-click="vm.changePassword()">
+                <span>修改密码</span>
+                <i class="fa fa-angle-right fa-2x next_page"></i>
+            </li>
+            <li class="setting_item" ng-click="vm.update()">
+                <span>版本更新</span>
+                <div class="vertical_center">
+                    <small class="gray">已是最新版本</small>
+                    <i class="fa fa-angle-right fa-2x next_page"></i>
+                </div>
+            </li>
+            <li class="setting_item" ng-click="vm.aboutUs()">
+                <span>关于我们</span>
+                <i class="fa fa-angle-right fa-2x next_page"></i>
+            </li>
+        </ul>
+        <button class="btn btn-block btn-default logout" ng-click="vm.logout()">退出登录</button>
+    </div>
+</div>

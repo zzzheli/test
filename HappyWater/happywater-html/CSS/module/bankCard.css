@@ -1,0 +1,62 @@
+/*银行卡*/
+.cards_box{
+    /*position: absolute;*/
+    /*or*/
+    overflow: hidden;
+}
+.cards{
+    margin-top: 10px;
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 432px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px #666;
+    border-radius: 20px;
+    color: rgba(256,256,256,.9);
+    background-color: #efb95e;
+    font-size: 44px;
+    text-shadow: -3px 3px 4px #222;
+}
+.add_card{
+    position: absolute;
+    right: 10px;
+    font-size: 2.5rem;
+}
+/*删除银行卡*/
+.remove{
+    width: 90%;
+    margin-left: 5%;
+}
+.support{
+    justify-content: flex-end;
+    color: #d7a85e;
+}
+.supportBankList{
+    padding: 20px 20px;
+}
+.CCB{
+    background: url("../../imgs/CCB.png") 100% no-repeat;
+    background-size: cover;
+}
+.ICBC{
+    background: url("../../imgs/ICBC.png") 100% no-repeat;
+    background-size: cover;
+}
+.ABC{
+    background: url("../../imgs/ABC.png") 100% no-repeat;
+    background-size: cover;
+}
+.PSBC{
+    background: url("../../imgs/PSBC.png") 100% no-repeat;
+    background-size: cover;
+}
+.BOC{
+    background: url("../../imgs/BOC.png") 100% no-repeat;
+    background-size: cover;
+}

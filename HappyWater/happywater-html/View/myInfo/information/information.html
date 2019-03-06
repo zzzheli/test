@@ -1,0 +1,28 @@
+<div class="information sub_page">
+    <div class="module">
+        <div class="page_header">
+            <i class="fa fa-chevron-left back_page" onclick="history.go(-1)"></i>
+            <span onclick="history.go(-1)">个人信息</span>
+        </div>
+        <ul class="info_list">
+            <li class="info_item">
+                <span>用户名</span>
+                <span>{{vm.userInfo.phoneNumber | phoneNum}}</span>
+            </li>
+            <li class="info_item">
+                <span>实名认证</span>
+                <span class="vertical_center" ng-click="vm.verify()">
+                <span>{{vm.userInfo.realName || '未实名'}}</span>
+                    <i class="fa fa-angle-right fa-2x next_page"></i>
+                </span>
+            </li>
+            <li class="info_item">
+                <span>更换手机</span>
+                <span class="vertical_center" ui-sref="changeTel_step1">
+                    <span>{{vm.userInfo.phoneNumber | phoneNum}}</span>
+                    <i class="fa fa-angle-right fa-2x next_page"></i>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

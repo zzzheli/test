@@ -1,0 +1,106 @@
+
+<div class="primary-list">
+    <div class="list-title" >
+        <span class="list-title-text">{{vm.pageTitle}}</span>
+        <button class="btn btn-default pull-right" onclick="history.go(-1)">返回</button>
+    </div>
+
+    <div class="panel-body table-responsive">
+        <form class="form-horizontal" name="myForm" novalidate>
+            <div class="form-group">
+                <label class="col-md-2 ">企 业 名 称：</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.newDebt.companyName"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/[^\u4E00-\u9FA5]/g,'')"
+                           onafterpaste="this.value=this.value.replace(/[^\u4E00-\u9FA5]/g,'')"
+                           placeholder="请输入企业名称（2~30个汉字）"
+                           name="title"
+                           required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">债 务 人：</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.newDebt.debtPerson"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/[^\u4E00-\u9FA5]/g,'')"
+                           onafterpaste="this.value=this.value.replace(/[^\u4E00-\u9FA5]/g,'')"
+                           placeholder="请输入真实姓名（2~6个汉字）"
+                           name="title" required/>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">手 机 号：</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.newDebt.phoneNumber"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入手机号（11位数字）"
+                           maxlength="11" ng-minlength="11"
+                           name="title" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">身 份 证 号 码：</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.newDebt.idCardNum"
+                           class="form-control"
+                           maxlength="18"
+                           onkeyup="this.value=this.value.replace(/^[a-zA-Z]+\D*|^\d{0,16}[a-zA-Z]+|[^0-9Xx]/g,'')"
+                           onafterpaste="this.value=this.value.replace(/^[a-zA-Z]+\D*|^\d{0,16}[a-zA-Z]+|[^0-9Xx]/g,'')"
+                           placeholder="请输入身份证号码（18位数字，可含X）"
+                           name="title" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">借 款 日 期：</label>
+                <div class="col-md-8">
+                    <input type="text"
+                           ng-model="vm.borrowingDate "
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/[^\d-]*$/g,'')"
+                           onafterpaste="this.value=this.value.replace(/[^\d-]*$/g,'')"
+                           placeholder="请输入借款日期（XXXX-XX-XX）"
+                           name="title" required/>
+                    <p class="debtWarn" ng-bind="vm.dateMsg"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">借 款 金 额（元）：</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.newDebt.borrowMoney"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入借款金额（数字组成的整数）"
+                           name="title" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 ">借 款 期 限（月）：</label>
+                <div class="col-md-8">
+                    <input type="number"
+                           ng-model="vm.newDebt.borrowingCycle"
+                           class="form-control"
+                           onkeyup="this.value=this.value.replace(/\D/g,'')"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                           placeholder="请输入借款期限（数字组成的整数）"
+                           name="title" required/>
+
+                </div>
+            </div>
+            <div>
+                <span class="btn btn-default" ng-click="vm.saveDebt()" ng-disabled="myForm.$invalid">保存</span>
+                <span class="btn btn-default" onclick="history.go(-1)">取消</span>
+            </div>
+        </form>
+    </div>
+</div>

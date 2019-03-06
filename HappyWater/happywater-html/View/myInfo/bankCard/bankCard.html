@@ -1,0 +1,20 @@
+<div class="bankCard sub_page">
+    <div class="page_header">
+        <i class="fa fa-chevron-left back_page" ui-sref='nav.myInfo'></i>
+        <span ui-sref='nav.myInfo'>银行卡</span>
+        <button class="add_card margin-right" ng-click="vm.addCard()" ui-sref="addCard_step1">
+            <i class="fa fa-2x fa-plus"></i>
+        </button>
+    </div>
+    <div class="cards_box">
+        <div class="cards">
+            <div class="card" ng-class="card.type" ng-repeat="card in vm.cards" ng-click="vm.detail(card)">
+                <p>{{card.type | cardType}}</p><br>
+                <p class="font-size-big">{{card.card | encrypt}}</p>
+            </div>
+            <div class="card" ng-if="!vm.cards.length">
+                <p>您还未绑定银行卡。</p>
+            </div>
+        </div>
+    </div>
+</div>
